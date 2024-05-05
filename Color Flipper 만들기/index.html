@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="Container">
+      <strong>Color Flipper</strong>
+      <p class="color">aqua</p>
+      <button>change!</button>
+    </div>
+    <script>
+      let i = 0;
+      let colors = ["pink", "blue", "yellow", "green", "aqua"];
+
+      document.querySelector("button").addEventListener("click", function () {
+        document.querySelector("body").style.backgroundColor = colors[i];
+        document.querySelector(".color").innerHTML = colors[i++];
+
+        if (i == 5) i = 0;
+      });
+    </script>
+  </body>
+</html>
